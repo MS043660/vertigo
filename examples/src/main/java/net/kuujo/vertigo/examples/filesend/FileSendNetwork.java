@@ -26,15 +26,15 @@ import net.kuujo.vertigo.java.ComponentVerticle;
 import net.kuujo.vertigo.network.ActiveNetwork;
 import net.kuujo.vertigo.network.NetworkConfig;
 
-import org.vertx.java.core.AsyncResult;
+import io.vertx.core.AsyncResult;
 import org.vertx.java.core.Future;
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 import org.vertx.java.core.VertxException;
 import org.vertx.java.core.buffer.Buffer;
 import org.vertx.java.core.eventbus.Message;
 import org.vertx.java.core.file.AsyncFile;
 import org.vertx.java.core.impl.DefaultFutureResult;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 import org.vertx.java.platform.Verticle;
 
 /**

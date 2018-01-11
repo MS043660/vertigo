@@ -24,13 +24,13 @@ import net.kuujo.vertigo.cluster.Cluster;
 import net.kuujo.vertigo.network.ActiveNetwork;
 import net.kuujo.vertigo.network.NetworkConfig;
 
-import org.vertx.java.core.AsyncResult;
+import io.vertx.core.AsyncResult;
 import org.vertx.java.core.Future;
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
+import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
 import org.vertx.java.core.VertxException;
 import org.vertx.java.core.json.DecodeException;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 import org.vertx.java.core.logging.Logger;
 import org.vertx.java.platform.Container;
 import org.vertx.java.platform.Verticle;

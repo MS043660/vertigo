@@ -15,7 +15,7 @@
  */
 package net.kuujo.vertigo.io;
 
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 
 /**
  * A Vertigo message pump similar to the Vert.x stream pump.

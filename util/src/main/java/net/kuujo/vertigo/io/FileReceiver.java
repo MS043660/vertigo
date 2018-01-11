@@ -23,8 +23,8 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import net.kuujo.vertigo.io.group.InputGroup;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 import org.vertx.java.core.buffer.Buffer;
 import org.vertx.java.core.file.AsyncFile;
 

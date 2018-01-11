@@ -15,8 +15,8 @@
  */
 package net.kuujo.vertigo.io;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
+import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
 
 /**
  * Provides an interface for feeding outputs using a handler that will

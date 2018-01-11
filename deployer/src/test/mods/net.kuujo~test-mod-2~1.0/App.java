@@ -1,6 +1,6 @@
 import net.kuujo.vertigo.java.ComponentVerticle;
 
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 
 import static org.vertx.testtools.VertxAssert.assertEquals;
 import static org.vertx.testtools.VertxAssert.testComplete;

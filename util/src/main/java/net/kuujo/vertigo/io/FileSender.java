@@ -19,8 +19,8 @@ import java.io.File;
 
 import net.kuujo.vertigo.io.group.OutputGroup;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 import org.vertx.java.core.buffer.Buffer;
 import org.vertx.java.core.file.AsyncFile;
 import org.vertx.java.core.impl.DefaultFutureResult;
