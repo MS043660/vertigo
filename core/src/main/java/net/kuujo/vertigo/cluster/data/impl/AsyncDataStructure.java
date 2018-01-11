@@ -15,12 +15,11 @@
  */
 package net.kuujo.vertigo.cluster.data.impl;
 
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
+import io.vertx.core.impl.FutureFactoryImpl;
 import net.kuujo.vertigo.cluster.impl.ClusterLocator;
-
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
-import org.vertx.java.core.impl.DefaultFutureResult;
 
 /**
  * Base asynchronous data structure.
@@ -28,38 +27,38 @@ import org.vertx.java.core.impl.DefaultFutureResult;
  * @author <a href="http://github.com/kuujo">Jordan Halterman</a>
  */
 class AsyncDataStructure {
-  protected final String address;
-  protected final String name;
-  protected final Vertx vertx;
-  private final ClusterLocator clusterLocator;
-  private String localAddress;
-  private long lastReset;
-  private long check;
+	protected final String address;
+	protected final String name;
+	protected final Vertx vertx;
+	private final ClusterLocator clusterLocator;
+	private String localAddress;
+	private long lastReset;
+	private long check;
 
-  public AsyncDataStructure(String address, String name, Vertx vertx) {
-    this.address = address;
-    this.name = name;
-    this.vertx = vertx;
-    this.clusterLocator = new ClusterLocator(vertx);
-  }
+	public AsyncDataStructure(String address, String name, Vertx vertx) {
+		this.address = address;
+		this.name = name;
+		this.vertx = vertx;
+		this.clusterLocator = new ClusterLocator(vertx);
+	}
 
-  public String name() {
-    return name;
-  }
+	public String name() {
+		return name;
+	}
 
-  /**
-   * Checks whether the local cluster address needs to be updated.
-   */
-  protected void checkAddress() {
-    if (localAddress == null) {
-      check++;
-      if (check > 1000 && System.currentTimeMillis() - lastReset > 15000) {
-        resetLocalAddress(null);
-      }
-    }
-  }
+	/**
+	 * Checks whether the local cluster address needs to be updated.
+	 */
+	protected void checkAddress() {
+		if (localAddress == null) {
+			check++;
+			if (check > 1000 && System.currentTimeMillis() - lastReset > 15000) {
+				resetLocalAddress(null);
+			}
+		}
+	}
 
-  /**
+	/**
    * Updates the known local group address.
    */
   protected void resetLocalAddress(final Handler<AsyncResult<Boolean>> doneHandler) {
@@ -70,19 +69,19 @@ class AsyncDataStructure {
       public void handle(AsyncResult<String> result) {
         if (result.succeeded() && result.result() != null) {
           localAddress = result.result();
-          new DefaultFutureResult<Boolean>(true).setHandler(doneHandler);
+          new FutureFactoryImpl().succeededFuture(true).setHandler(doneHandler);
         } else {
-          new DefaultFutureResult<Boolean>(false).setHandler(doneHandler);
+        	new FutureFactoryImpl().succeededFuture(false).setHandler(doneHandler);
         }
       }
     });
   }
 
-  /**
-   * Returns the local address if available, otherwise a group address.
-   */
-  protected final String localOrGroupAddress() {
-    return localAddress != null ? localAddress : address;
-  }
+	/**
+	 * Returns the local address if available, otherwise a group address.
+	 */
+	protected final String localOrGroupAddress() {
+		return localAddress != null ? localAddress : address;
+	}
 
 }

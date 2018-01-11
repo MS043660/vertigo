@@ -17,8 +17,8 @@ package net.kuujo.vertigo.component;
 
 import net.kuujo.vertigo.service.Service;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 
 /**
  * The component coordinator handles coordination of component startup and

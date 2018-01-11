@@ -16,7 +16,7 @@
 package net.kuujo.vertigo.util.serialization;
 
 import org.vertx.java.core.json.JsonArray;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 

@@ -20,7 +20,7 @@ import net.kuujo.vertigo.io.batch.InputBatch;
 import net.kuujo.vertigo.io.batch.InputBatchSupport;
 import net.kuujo.vertigo.io.group.InputGroupSupport;
 
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 
 /**
  * Input connection represents the receiving side of a connection

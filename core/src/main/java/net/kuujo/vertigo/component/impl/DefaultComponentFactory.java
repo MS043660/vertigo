@@ -20,7 +20,7 @@ import net.kuujo.vertigo.component.Component;
 import net.kuujo.vertigo.component.ComponentFactory;
 import net.kuujo.vertigo.component.InstanceContext;
 
-import org.vertx.java.core.Vertx;
+import io.vertx.core.Vertx;
 import org.vertx.java.platform.Container;
 
 /**

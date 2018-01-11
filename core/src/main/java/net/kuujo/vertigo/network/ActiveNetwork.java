@@ -22,9 +22,9 @@ import net.kuujo.vertigo.component.VerticleConfig;
 import net.kuujo.vertigo.io.connection.ConnectionConfig;
 import net.kuujo.vertigo.io.selector.Selector;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
+import io.vertx.core.json.JsonObject;
 
 /**
  * The active network is an interface to reconfiguring live networks.

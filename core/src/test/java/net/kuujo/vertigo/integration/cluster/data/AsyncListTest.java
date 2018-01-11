@@ -25,8 +25,8 @@ import net.kuujo.vertigo.cluster.data.AsyncList;
 import net.kuujo.vertigo.cluster.impl.DefaultCluster;
 
 import org.junit.Test;
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 import org.vertx.testtools.TestVerticle;
 
 /**

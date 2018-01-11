@@ -20,7 +20,7 @@ import net.kuujo.vertigo.util.serialization.SerializationException;
 import net.kuujo.vertigo.util.serialization.Serializer;
 
 import org.vertx.java.core.json.JsonArray;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.AnnotationIntrospector;

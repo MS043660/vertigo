@@ -22,7 +22,7 @@ import net.kuujo.vertigo.component.impl.DefaultModuleConfig;
 import net.kuujo.vertigo.component.impl.DefaultVerticleConfig;
 import net.kuujo.vertigo.hook.ComponentHook;
 
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;

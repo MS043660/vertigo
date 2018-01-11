@@ -15,7 +15,7 @@
  */
 package net.kuujo.vertigo.cluster.manager.impl;
 
-import org.vertx.java.core.Vertx;
+import io.vertx.core.Vertx;
 
 import com.hazelcast.core.HazelcastInstance;
 

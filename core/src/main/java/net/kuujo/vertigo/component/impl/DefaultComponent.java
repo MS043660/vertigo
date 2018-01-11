@@ -29,10 +29,10 @@ import net.kuujo.vertigo.io.impl.DefaultOutputCollector;
 import net.kuujo.vertigo.io.logging.PortLoggerFactory;
 import net.kuujo.vertigo.util.CountingCompletionHandler;
 
-import org.vertx.java.core.AsyncResult;
+import io.vertx.core.AsyncResult;
 import org.vertx.java.core.Future;
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
+import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
 import org.vertx.java.core.impl.DefaultFutureResult;
 import org.vertx.java.core.logging.Logger;
 import org.vertx.java.core.logging.impl.LoggerFactory;

@@ -19,7 +19,7 @@ import net.kuujo.vertigo.io.Output;
 import net.kuujo.vertigo.io.connection.impl.ConnectionOutputBatch;
 import net.kuujo.vertigo.io.group.OutputGroupSupport;
 
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 
 /**
  * Output connection.<p>

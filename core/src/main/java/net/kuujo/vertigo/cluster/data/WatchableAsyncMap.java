@@ -15,8 +15,8 @@
  */
 package net.kuujo.vertigo.cluster.data;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 
 /**
  * Watchable asynchronous map.<p>

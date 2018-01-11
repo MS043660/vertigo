@@ -15,7 +15,7 @@
  */
 package net.kuujo.vertigo.platform;
 
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Module configuration information.

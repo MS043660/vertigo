@@ -22,7 +22,7 @@ import java.util.Map;
 import net.kuujo.vertigo.io.connection.Connection;
 import net.kuujo.vertigo.util.serialization.SerializerFactory;
 
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;

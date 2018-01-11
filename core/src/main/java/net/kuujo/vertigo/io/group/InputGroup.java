@@ -17,7 +17,7 @@ package net.kuujo.vertigo.io.group;
 
 import net.kuujo.vertigo.io.Input;
 
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 
 /**
  * Input groups represent collections of input messages.<p>

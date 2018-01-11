@@ -24,11 +24,11 @@ import net.kuujo.vertigo.io.batch.OutputBatch;
 import net.kuujo.vertigo.io.group.OutputGroup;
 import net.kuujo.vertigo.io.group.impl.BaseOutputGroup;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
+import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
 import org.vertx.java.core.buffer.Buffer;
 import org.vertx.java.core.json.JsonArray;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Top-level output batch.<p>

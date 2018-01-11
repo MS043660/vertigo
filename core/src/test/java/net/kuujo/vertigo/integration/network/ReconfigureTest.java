@@ -26,8 +26,8 @@ import net.kuujo.vertigo.network.NetworkConfig;
 import net.kuujo.vertigo.util.Addresses;
 
 import org.junit.Test;
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 import org.vertx.testtools.TestVerticle;
 
 /**

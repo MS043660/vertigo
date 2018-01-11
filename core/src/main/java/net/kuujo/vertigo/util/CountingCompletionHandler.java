@@ -15,8 +15,8 @@
  */
 package net.kuujo.vertigo.util;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 import org.vertx.java.core.impl.DefaultFutureResult;
 
 /**

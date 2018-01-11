@@ -26,7 +26,7 @@ import net.kuujo.vertigo.io.connection.ConnectionConfig;
 import net.kuujo.vertigo.io.selector.Selector;
 import net.kuujo.vertigo.network.impl.DefaultNetworkConfig;
 
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 

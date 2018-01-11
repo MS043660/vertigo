@@ -37,15 +37,15 @@ import net.kuujo.vertigo.util.Observer;
 import net.kuujo.vertigo.util.Task;
 import net.kuujo.vertigo.util.TaskRunner;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
-import org.vertx.java.core.buffer.Buffer;
-import org.vertx.java.core.impl.DefaultFutureResult;
-import org.vertx.java.core.json.JsonArray;
-import org.vertx.java.core.json.JsonObject;
-import org.vertx.java.core.logging.Logger;
-import org.vertx.java.core.logging.impl.LoggerFactory;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
+import io.vertx.core.buffer.Buffer;
+import io.vertx.core.impl.FutureFactoryImpl;
+import io.vertx.core.json.JsonArray;
+import io.vertx.core.json.JsonObject;
+import io.vertx.core.logging.Logger;
+import io.vertx.core.logging.LoggerFactory;
 
 /**
  * Default output port implementation.
@@ -282,7 +282,7 @@ public class DefaultOutputPort implements OutputPort, Observer<OutputPortContext
             });
           }
         } else {
-          new DefaultFutureResult<Void>((Void) null).setHandler(doneHandler);
+          new FutureFactoryImpl().succeededFuture((Void) null).setHandler(doneHandler);
           task.complete();
         }
       }
@@ -331,7 +331,7 @@ public class DefaultOutputPort implements OutputPort, Observer<OutputPortContext
             });
           }
         } else {
-          new DefaultFutureResult<Void>((Void) null).setHandler(doneHandler);
+        	new FutureFactoryImpl().succeededFuture((Void) null).setHandler(doneHandler);
           task.complete();
         }
       }

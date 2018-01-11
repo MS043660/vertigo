@@ -17,11 +17,8 @@ package net.kuujo.vertigo.util;
 
 import java.util.concurrent.ExecutorService;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
-import org.vertx.java.core.impl.VertxInternal;
-import org.vertx.java.core.spi.Action;
+import io.vertx.core.Vertx;
+import io.vertx.core.impl.VertxInternal;
 
 /**
  * Manages access to the internal Vert.x context.
@@ -44,42 +41,42 @@ public class ContextManager {
    * @return The Vert.x executor service.
    */
   public ExecutorService getExecutorService() {
-    return vertx.getBackgroundPool();
+    return vertx.getWorkerPool();
   }
 
-  /**
-   * Runs a runnable on a background thread.
-   *
-   * @param runnable The runnable to run.
-   * @return The context manager.
-   */
-  public ContextManager run(Runnable runnable) {
-    vertx.startInBackground(runnable, false);
-    return this;
-  }
-
-  /**
-   * Runs a runnable on a background thread.
-   *
-   * @param runnable The runnable to run.
-   * @param multiThreaded Indicates whether the runnable is multi-threaded.
-   * @return The context manager.
-   */
-  public ContextManager run(Runnable runnable, boolean multiThreaded) {
-    vertx.startInBackground(runnable, multiThreaded);
-    return this;
-  }
-
-  /**
-   * Executes a blocking action on a background thread.
-   *
-   * @param action The action to execute.
-   * @param resultHandler A handler to be called with the action result.
-   * @return The context manager.
-   */
-  public <T> ContextManager execute(Action<T> action, Handler<AsyncResult<T>> resultHandler) {
-    vertx.executeBlocking(action, resultHandler);
-    return this;
-  }
+//  /**
+//   * Runs a runnable on a background thread.
+//   *
+//   * @param runnable The runnable to run.
+//   * @return The context manager.
+//   */
+//  public ContextManager run(Runnable runnable) {
+//    vertx.startInBackground(runnable, false);
+//    return this;
+//  }
+//
+//  /**
+//   * Runs a runnable on a background thread.
+//   *
+//   * @param runnable The runnable to run.
+//   * @param multiThreaded Indicates whether the runnable is multi-threaded.
+//   * @return The context manager.
+//   */
+//  public ContextManager run(Runnable runnable, boolean multiThreaded) {
+//    vertx.startInBackground(runnable, multiThreaded);
+//    return this;
+//  }
+//
+//  /**
+//   * Executes a blocking action on a background thread.
+//   *
+//   * @param action The action to execute.
+//   * @param resultHandler A handler to be called with the action result.
+//   * @return The context manager.
+//   */
+//  public <T> ContextManager execute(Action<T> action, Handler<AsyncResult<T>> resultHandler) {
+//    vertx.executeBlocking(action, resultHandler);
+//    return this;
+//  }
 
 }

@@ -18,13 +18,13 @@ package net.kuujo.vertigo.cluster.data.impl;
 import net.kuujo.vertigo.cluster.data.AsyncQueue;
 import net.kuujo.vertigo.cluster.data.DataException;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
-import org.vertx.java.core.eventbus.EventBus;
-import org.vertx.java.core.eventbus.Message;
-import org.vertx.java.core.impl.DefaultFutureResult;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.DeploymentOptions;
+import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
+import io.vertx.core.eventbus.EventBus;
+import io.vertx.core.impl.FutureFactoryImpl;
+import io.vertx.core.json.JsonObject;
 
 /**
  * An event bus queue implementation.
@@ -50,11 +50,14 @@ public class DefaultAsyncQueue<T> extends AsyncDataStructure implements AsyncQue
   public void add(final T value, final Handler<AsyncResult<Boolean>> doneHandler) {
     checkAddress();
     JsonObject message = new JsonObject()
-        .putString("action", "add")
-        .putString("type", "queue")
-        .putString("name", name)
-        .putValue("value", value);
-    eventBus.sendWithTimeout(address, message, 30000, new Handler<AsyncResult<Message<JsonObject>>>() {
+        .put("action", "add")
+        .put("type", "queue")
+        .put("name", name)
+        .put("value", value);
+    
+    DeploymentOptions deployment=new DeploymentOptions();
+    deployment.setMaxWorkerExecuteTime(30000);
+    eventBus.send(address, message, deployment, new Handler<AsyncResult<Message<JsonObject>>>() {
       @Override
       public void handle(final AsyncResult<Message<JsonObject>> result) {
         if (result.failed()) {
@@ -64,14 +67,14 @@ public class DefaultAsyncQueue<T> extends AsyncDataStructure implements AsyncQue
               if (resetResult.succeeded() && resetResult.result()) {
                 add(value, doneHandler);
               } else {
-                new DefaultFutureResult<Boolean>(result.cause()).setHandler(doneHandler);
+            		new FutureFactoryImpl().succeededFuture(result.cause()).setHandler(doneHandler);
               }
             }
           });
         } else if (result.result().body().getString("status").equals("error")) {
-          new DefaultFutureResult<Boolean>(new DataException(result.result().body().getString("message"))).setHandler(doneHandler);
+        	new FutureFactoryImpl().succeededFuture(result.result().body().getString("message")).setHandler(doneHandler);
         } else {
-          new DefaultFutureResult<Boolean>(result.result().body().getBoolean("result")).setHandler(doneHandler);
+        	new FutureFactoryImpl().succeededFuture(result.result().body().getBoolean("result")).setHandler(doneHandler);
         }
       }
     });

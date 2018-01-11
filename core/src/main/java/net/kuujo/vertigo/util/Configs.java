@@ -22,7 +22,7 @@ import net.kuujo.vertigo.network.NetworkConfig;
 import net.kuujo.vertigo.util.serialization.Serializer;
 import net.kuujo.vertigo.util.serialization.SerializerFactory;
 
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Configuration helper methods.

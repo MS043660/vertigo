@@ -18,11 +18,11 @@ package net.kuujo.vertigo.hook;
 import net.kuujo.vertigo.component.InstanceContext;
 import net.kuujo.vertigo.util.Contexts;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 import org.vertx.java.core.eventbus.EventBus;
 import org.vertx.java.core.eventbus.Message;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Event bus hook listener.<p>

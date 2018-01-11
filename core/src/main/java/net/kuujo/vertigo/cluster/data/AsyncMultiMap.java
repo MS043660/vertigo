@@ -18,8 +18,8 @@ package net.kuujo.vertigo.cluster.data;
 import java.util.Collection;
 import java.util.Set;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 
 /**
  * Asynchronous multi-map.<p>

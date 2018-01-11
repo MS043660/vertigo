@@ -23,9 +23,9 @@ import net.kuujo.vertigo.io.InputCollector;
 import net.kuujo.vertigo.io.OutputCollector;
 import net.kuujo.vertigo.util.Components;
 
-import org.vertx.java.core.AsyncResult;
+import io.vertx.core.AsyncResult;
 import org.vertx.java.core.Future;
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 import org.vertx.java.core.logging.Logger;
 import org.vertx.java.core.logging.impl.LoggerFactory;
 import org.vertx.java.platform.Verticle;

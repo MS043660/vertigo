@@ -17,7 +17,7 @@ package net.kuujo.vertigo.cluster.manager.impl;
 
 import java.util.UUID;
 
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 
 /**
  * Fake cluster listener for non-clustered Vert.x instances.

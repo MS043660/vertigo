@@ -25,7 +25,7 @@ import net.kuujo.vertigo.util.serialization.SerializationException;
 
 import org.vertx.java.core.buffer.Buffer;
 import org.vertx.java.core.json.JsonArray;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Handles serialization of output messages.<p>

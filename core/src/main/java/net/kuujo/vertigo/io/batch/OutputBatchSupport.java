@@ -15,7 +15,7 @@
  */
 package net.kuujo.vertigo.io.batch;
 
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 
 /**
  * Support for creating output batches.

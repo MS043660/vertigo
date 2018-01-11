@@ -20,8 +20,8 @@ import java.util.Set;
 
 import net.kuujo.vertigo.util.ContextManager;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
+import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
 
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.MemberAttributeEvent;

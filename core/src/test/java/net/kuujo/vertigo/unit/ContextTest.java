@@ -29,7 +29,7 @@ import net.kuujo.vertigo.network.NetworkContext;
 import net.kuujo.vertigo.network.impl.DefaultNetworkConfig;
 
 import org.junit.Test;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Network/component/instance/input context tests.

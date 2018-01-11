@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.vertx.java.core.json.JsonArray;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Module configuration fields.

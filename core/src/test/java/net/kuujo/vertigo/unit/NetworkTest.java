@@ -33,7 +33,7 @@ import net.kuujo.vertigo.util.Configs;
 
 import org.junit.Test;
 import org.vertx.java.core.json.JsonArray;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Network configuration tests.

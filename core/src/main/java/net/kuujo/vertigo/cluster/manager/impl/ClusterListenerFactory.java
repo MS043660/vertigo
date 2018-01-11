@@ -17,7 +17,7 @@ package net.kuujo.vertigo.cluster.manager.impl;
 
 import java.lang.reflect.Field;
 
-import org.vertx.java.core.Vertx;
+import io.vertx.core.Vertx;
 import org.vertx.java.core.impl.VertxInternal;
 import org.vertx.java.core.spi.cluster.ClusterManager;
 

@@ -36,7 +36,7 @@ import net.kuujo.vertigo.network.NetworkConfig;
 import net.kuujo.vertigo.util.Args;
 import net.kuujo.vertigo.util.ContextUri;
 
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Default network configuration implementation.

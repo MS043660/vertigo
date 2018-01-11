@@ -20,7 +20,7 @@ import net.kuujo.vertigo.io.batch.OutputBatch;
 import net.kuujo.vertigo.io.batch.OutputBatchSupport;
 import net.kuujo.vertigo.io.group.OutputGroupSupport;
 
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 
 /**
  * Output port to which messages are sent.<p>

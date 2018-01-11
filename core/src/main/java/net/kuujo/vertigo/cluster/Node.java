@@ -15,9 +15,9 @@
  */
 package net.kuujo.vertigo.cluster;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Client for communicating with a single Vertigo cluster node.<p>

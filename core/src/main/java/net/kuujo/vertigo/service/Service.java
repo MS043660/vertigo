@@ -15,8 +15,8 @@
  */
 package net.kuujo.vertigo.service;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 
 /**
  * Base interface for types that can be started and stopped.

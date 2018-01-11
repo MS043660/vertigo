@@ -41,11 +41,11 @@ import net.kuujo.vertigo.util.CountingCompletionHandler;
 import net.kuujo.vertigo.util.Task;
 import net.kuujo.vertigo.util.TaskRunner;
 
-import org.vertx.java.core.AsyncResult;
+import io.vertx.core.AsyncResult;
 import org.vertx.java.core.Future;
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 import org.vertx.java.core.impl.DefaultFutureResult;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 import org.vertx.java.core.logging.Logger;
 import org.vertx.java.core.logging.impl.LoggerFactory;
 import org.vertx.java.platform.Verticle;

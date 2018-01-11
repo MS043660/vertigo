@@ -21,8 +21,8 @@ import net.kuujo.vertigo.component.Component;
 import net.kuujo.vertigo.component.InstanceContext;
 import net.kuujo.vertigo.component.impl.DefaultComponentFactory;
 
-import org.vertx.java.core.Vertx;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.Vertx;
+import io.vertx.core.json.JsonObject;
 import org.vertx.java.platform.Container;
 import org.vertx.java.platform.impl.ModuleIdentifier;
 

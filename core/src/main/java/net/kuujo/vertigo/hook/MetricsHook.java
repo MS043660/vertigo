@@ -19,7 +19,7 @@ import net.kuujo.vertigo.component.Component;
 import net.kuujo.vertigo.component.InstanceContext;
 
 import org.vertx.java.core.eventbus.EventBus;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

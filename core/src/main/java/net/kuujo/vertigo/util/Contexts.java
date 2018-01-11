@@ -26,7 +26,7 @@ import net.kuujo.vertigo.io.port.OutputPortContext;
 import net.kuujo.vertigo.network.NetworkContext;
 import net.kuujo.vertigo.util.serialization.SerializerFactory;
 
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Context serialization helpers.

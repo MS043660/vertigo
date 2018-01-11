@@ -15,7 +15,7 @@
  */
 package net.kuujo.vertigo.cluster.manager.impl;
 
-import org.vertx.java.core.Handler;
+import io.vertx.core.Handler;
 
 /**
  * Cluster membership listener.

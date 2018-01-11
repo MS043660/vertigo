@@ -24,7 +24,7 @@ import net.kuujo.vertigo.component.ComponentConfig;
 import net.kuujo.vertigo.hook.ComponentHook;
 import net.kuujo.vertigo.util.Args;
 
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 
 /**
  * Base class for component configurations.

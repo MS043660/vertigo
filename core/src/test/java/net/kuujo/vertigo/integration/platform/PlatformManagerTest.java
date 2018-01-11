@@ -31,8 +31,8 @@ import net.kuujo.vertigo.platform.impl.DefaultPlatformManager;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 import org.vertx.testtools.TestVerticle;
 
 /**

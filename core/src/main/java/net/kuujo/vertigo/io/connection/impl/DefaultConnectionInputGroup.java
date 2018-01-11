@@ -20,8 +20,8 @@ import java.util.Map;
 
 import net.kuujo.vertigo.io.group.InputGroup;
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
+import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
 
 /**
  * Connection level input group.<p>

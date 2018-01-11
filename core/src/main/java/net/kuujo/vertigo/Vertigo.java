@@ -25,11 +25,9 @@ import net.kuujo.vertigo.util.Addresses;
 import net.kuujo.vertigo.util.Configs;
 import net.kuujo.vertigo.util.ContextUri;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
+import io.vertx.core.Vertx;
 import org.vertx.java.core.impl.DefaultFutureResult;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 import org.vertx.java.platform.Container;
 import org.vertx.java.platform.Verticle;
 

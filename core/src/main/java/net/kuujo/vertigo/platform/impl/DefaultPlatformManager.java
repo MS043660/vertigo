@@ -45,11 +45,11 @@ import net.kuujo.vertigo.platform.PlatformManagerException;
 import net.kuujo.vertigo.util.Args;
 import net.kuujo.vertigo.util.ContextManager;
 
-import org.vertx.java.core.AsyncResult;
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.Vertx;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
 import org.vertx.java.core.json.DecodeException;
-import org.vertx.java.core.json.JsonObject;
+import io.vertx.core.json.JsonObject;
 import org.vertx.java.core.spi.Action;
 import org.vertx.java.platform.Container;
 

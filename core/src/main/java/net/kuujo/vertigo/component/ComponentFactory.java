@@ -17,7 +17,7 @@ package net.kuujo.vertigo.component;
 
 import net.kuujo.vertigo.cluster.Cluster;
 
-import org.vertx.java.core.Vertx;
+import io.vertx.core.Vertx;
 import org.vertx.java.platform.Container;
 
 /**
