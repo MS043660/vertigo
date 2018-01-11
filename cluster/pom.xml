@@ -9,7 +9,6 @@
 
   <artifactId>vertigo-cluster</artifactId>
   <name>Vertigo Cluster</name>
-
   <dependencies>
     <dependency>
       <groupId>net.kuujo</groupId>

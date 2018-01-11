@@ -35,6 +35,7 @@ import org.vertx.java.core.logging.Logger;
 import org.vertx.java.platform.Container;
 import org.vertx.java.platform.Verticle;
 import org.vertx.java.platform.VerticleFactory;
+import net.kuujo.vertigo.Vertigo;
 
 /**
  * Vertigo network factory.

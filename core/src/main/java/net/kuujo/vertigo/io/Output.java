@@ -15,13 +15,13 @@
  */
 package net.kuujo.vertigo.io;
 
-import net.kuujo.vertigo.io.group.OutputGroupSupport;
-
 import org.vertx.java.core.Handler;
 import org.vertx.java.core.Vertx;
 import org.vertx.java.core.buffer.Buffer;
 import org.vertx.java.core.json.JsonArray;
 import org.vertx.java.core.json.JsonObject;
+
+import net.kuujo.vertigo.io.group.OutputGroupSupport;
 
 /**
  * Output interface.<p>
